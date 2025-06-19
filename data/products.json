@@ -1,0 +1,96 @@
+{
+    "products": [
+      {
+        "id": 1,
+        "category": "Pestemal - Peskir",
+        "title": "Kayra Export Peştemal Petrol Mavisi Küçük Boy Peşkir 45x90 Cm Küçük Peşkir",
+        "price": 58.87,
+        "description": "En iyi renkler ile kullanışlı peşkir.",
+        "images": [
+          "https://cdn.dsmcdn.com/mnresize/620/920/ty603/product/media/images/20221119/15/218281794/627421451/1/1_org_zoom.jpg",
+          "https://cdn.dsmcdn.com/ty605/product/media/images/20221119/15/218281794/627421451/3/3_org_zoom.jpg",
+          "https://cdn.dsmcdn.com/ty604/product/media/images/20221119/15/218281794/627421451/4/4_org_zoom.jpg"
+        ]
+      },
+      {
+        "id": 2,
+        "category": "Pestemal - Peskir",
+        "title": "Kayra Export Peştemal Hardal-siyah 95x180 Cm Pamuk Peştemal",
+        "price": 116.53,
+        "description": "Hardal rengi siyah şerit detaylı peştemal. Türk hamam kültürünün vazgeçilmez parçaları evinizde!",
+        "images": [
+          "https://cdn.dsmcdn.com/ty580/product/media/images/20221029/18/203713793/609169715/1/1_org_zoom.jpg",
+          "https://cdn.dsmcdn.com/ty580/product/media/images/20221029/18/203713793/609169715/3/3_org_zoom.jpg",
+          "https://cdn.dsmcdn.com/ty580/product/media/images/20221029/18/203713793/609169715/4/4_org_zoom.jpg"
+        ]
+      },
+      {
+        "id": 3,
+        "category": "Tablo",
+        "title": "Kayra Export Tablo, Kanvas Tablo, Çift Sarılma Tuval, Yatak Odası Hediye Kanvas, Çift Duvar Süsü,",
+        "price": 350.00,
+        "description": "Evinizi güzelleştirecek şık tablo. Hediyelik eşya.",
+        "images": [
+          "https://cdn.dsmcdn.com/ty1314/product/media/images/prod/QC/20240516/03/7eb5b523-e479-32c0-8a3f-13e4cca5b110/1_org_zoom.jpg"
+        ]
+      },
+      {
+        "id": 4,
+        "category": "Tablo",
+        "title": "Kayra Export Kanvas Tablo, Kanvas Tablo, Modern Mermer Kanvas Baskı, Lüks Mermer Hediye Kanvas, Gümüş Kanvas,",
+        "price": 350.00,
+        "description": "Evinizi güzelleştirecek şık tablo. Hediyelik eşya.",
+        "images": [
+          "https://cdn.dsmcdn.com/ty518/product/media/images/20220824/17/165125058/551578817/1/1_org_zoom.jpg",
+          "https://cdn.dsmcdn.com/ty518/product/media/images/20220824/17/165125058/551578817/2/2_org_zoom.jpg"
+        ]
+      },
+      {
+        "id": 5,
+        "category": "Hali",
+        "title": "Kayra Export El Dokuma Halı Türk Halı, Mor Renkli Halı, 65x132 Cm",
+        "price": 1012.54,
+        "description": "Şık mor el dokuması halı. Türk halısı.",
+        "images": [
+          "https://cdn.dsmcdn.com/ty980/product/media/images/20230807/11/400900444/987214259/1/1_org_zoom.jpg",
+          "https://cdn.dsmcdn.com/ty980/product/media/images/20230807/11/400900444/987214259/3/3_org_zoom.jpg"
+        ]
+      },
+      {
+        "id": 6,
+        "category": "Hali",
+        "title": "Kayra Export El Dokuma Halı, 118x195 Cm Türk Halı",
+        "price": 1012.54,
+        "description": "Şık mor el dokuması halı. Türk halısı.",
+        "images": [
+          "https://cdn.dsmcdn.com/ty982/product/media/images/20230809/16/401559069/988108497/1/1_org_zoom.jpg",
+          "https://cdn.dsmcdn.com/ty982/product/media/images/20230809/16/401559069/988108497/2/2_org_zoom.jpg",
+          "https://cdn.dsmcdn.com/ty981/product/media/images/20230809/16/401559069/988108497/3/3_org_zoom.jpg"
+        ]
+      },
+      {
+        "id": 7,
+        "category": "Kirlent",
+        "title": "Kayra Export Kırlent Kilim Minder, 20 X 40 Cm Bej Minder, Koltuk Minderi, Tasarım Yastıklar",
+        "price": 223.14,
+        "description": "Tasarım yastık, kırlent. 20x40cm hediye bej minder, kırlent.",
+        "images": [
+          "https://cdn.dsmcdn.com/ty1007/product/media/images/prod/SPM/PIM/20230928/13/7727114c-8c44-3730-8941-21d1bbf0f952/1_org_zoom.jpg",
+          "https://cdn.dsmcdn.com/ty1006/product/media/images/prod/SPM/PIM/20230928/13/a7446394-106a-3b72-b8d7-95d9ccfffc9e/1_org_zoom.jpg",
+          "https://cdn.dsmcdn.com/ty1005/product/media/images/prod/SPM/PIM/20230928/13/0409dbdc-acd2-31ca-ad7e-8274f113291e/1_org_zoom.jpg"
+        ]
+      },
+      {
+        "id": 8,
+        "category": "Kirlent",
+        "title": "Kayra Export Kırlent, Antik Yastıklar, Ev Dekoru Yastığı, 20 X 40 Cm Kahverengi Yastık Kırlent Kılıfı",
+        "price": 223.61,
+        "description": "Tasarım yastık, kırlent. 20x40cm hediye kahverengi kırmızı detaylı minder, kırlent.",
+        "images": [
+          "https://cdn.dsmcdn.com/ty1006/product/media/images/prod/SPM/PIM/20230928/13/a8576d5c-7abb-3fd2-acc6-acbd42a0ee54/1_org_zoom.jpg",
+          "https://cdn.dsmcdn.com/ty1007/product/media/images/prod/SPM/PIM/20230928/13/d12bcdc1-bb4b-3cb7-97f3-f7e13df4b550/1_org_zoom.jpg",
+          "https://cdn.dsmcdn.com/ty1007/product/media/images/prod/SPM/PIM/20230928/13/4e91bd3d-902e-385a-ba37-d3a0b91b14d7/1_org_zoom.jpg"
+        ]
+      }
+    ]
+  }
