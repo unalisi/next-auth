@@ -33,7 +33,7 @@ export default function CategoryPage({ params }: { params: { slug: string } }) {
   }
 
   return (
-    <section className='container mx-auto'>
+    <section className='container mx-auto my-8'>
       <div className="mb-8 text-center">
         <p className="text-sm text-gray-500">Kategori</p>
         <h1 className="text-4xl font-bold text-gray-800">{categoryName}</h1>
