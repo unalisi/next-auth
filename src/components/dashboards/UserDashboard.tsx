@@ -74,7 +74,7 @@ export default function UserDashboard({ user }: DashboardProps) {
         <h2 className="text-2xl font-semibold mb-4">Sepetim</h2>
         {cartItems.length > 0 ? (
           <div className="flex flex-col flex-grow h-full">
-            <ul className="space-y-4 flex-grow">
+            <ul className="space-y-4 flex-grow max-h-[400px] overflow-y-scroll pr-2">
               {cartItems.map((item) => (
                 <li
                   key={item.id}

@@ -29,7 +29,7 @@ const LinkedinIcon = (props: React.SVGProps<SVGSVGElement>) => (
 const footerLinks = [
   { href: "/", label: "Anasayfa" },
   { href: "/#allproducts", label: "Tüm Ürünler" },
-  { href: "/hakkimizda", label: "Hakkımızda" },
+  { href: "/about", label: "Hakkımızda" },
   { href: "/dashboard", label: "Hesabım" },
 ];
 

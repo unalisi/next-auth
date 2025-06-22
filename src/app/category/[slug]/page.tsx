@@ -1,19 +1,21 @@
-import Card from '../../../components/Card';
-import data from '@/data/products.json';
-import { Product } from '@/lib/types';
-import { slugify } from '@/lib/utils';
-import { notFound } from 'next/navigation';
+import Card from "../../../components/Card";
+import data from "@/data/products.json";
+import { Product } from "@/lib/types";
+import { slugify } from "@/lib/utils";
+import { notFound } from "next/navigation";
 
 // Bu fonksiyon, URL'deki slug ile eşleşen ürünleri bulur.
-const getProductsByCategory = (categorySlug: string): { products: Product[], categoryName: string | null } => {
+const getProductsByCategory = (
+  categorySlug: string
+): { products: Product[]; categoryName: string | null } => {
   let categoryName: string | null = null;
-  
-  const filteredProducts = data.products.filter(product => {
+
+  const filteredProducts = data.products.filter((product) => {
     const currentCategorySlug = slugify(product.category);
     if (currentCategorySlug === categorySlug) {
       if (!categoryName) {
         // Eşleşen ilk üründen kategori adını çek
-        categoryName = product.category; 
+        categoryName = product.category;
       }
       return true;
     }
@@ -22,7 +24,6 @@ const getProductsByCategory = (categorySlug: string): { products: Product[], cat
 
   return { products: filteredProducts, categoryName };
 };
-
 
 export default function CategoryPage({ params }: { params: { slug: string } }) {
   const { products, categoryName } = getProductsByCategory(params.slug);
@@ -33,7 +34,7 @@ export default function CategoryPage({ params }: { params: { slug: string } }) {
   }
 
   return (
-    <section className='container mx-auto my-8'>
+    <section className="container mx-auto my-8">
       <div className="mb-8 text-center">
         <p className="text-sm text-gray-500">Kategori</p>
         <h1 className="text-4xl font-bold text-gray-800">{categoryName}</h1>

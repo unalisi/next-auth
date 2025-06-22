@@ -1,41 +1,40 @@
-import { auth0 } from "@/lib/auth0";
+import { auth0 } from "@/lib/auth0"; 
+import { isUserAdmin } from "@/src/actions/isUserAdmin"; 
+
 import { redirect } from "next/navigation";
 import UserDashboard from "../../components/dashboards/UserDashboard";
-// import AdminDashboard from "../../components/dashboards/AdminDashboard";
-
-const ROLES_NAMESPACE = "https://localhost:3000/roles";
+import AdminDashboard from "../../components/dashboards/AdminDashboard";
 
 export default async function DashboardPage() {
+  
+  // Oturumu, kendi auth0 istemcimiz üzerinden alıyoruz.
   const session = await auth0.getSession();
 
-  // Eğer oturum yoksa, kullanıcıyı login sayfasına yönlendir
   if (!session?.user) {
     redirect("/auth/login");
   }
 
-  // Kullanıcı ve rol bilgilerini çek
   const user = session.user;
-  const roles = (user[ROLES_NAMESPACE] as string[]) || [];
-  const isAdmin = roles.includes("admin");
+  
+  // Rol kontrolü
+  const isAdmin = await isUserAdmin();
 
   return (
-    <div className="container mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold mb-2">
-        Hoş Geldin, {user.name || user.nickname}!
-      </h1>
-      <p className="text-gray-600 mb-8">
-        Bu panelden hesap bilgilerine ve sepetine erişebilirsin!
-      </p>
+    <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div className="text-center mb-10">
+        <h1 className="text-4xl font-bold text-gray-800 mb-2">
+          Hoş Geldin, {user.name || user.nickname}!
+        </h1>
+        <p className="text-lg text-gray-600">
+          Bu panelden hesap bilgilerine ve sepetine erişebilirsin!
+        </p>
+      </div>
 
-      {/* Geçici olarak kalacak */}
-      <UserDashboard user={user} />
-
-      {/* Rol Kontrolü */}
-      {/* {isAdmin ? (
+      {isAdmin ? (
         <AdminDashboard user={user} />
       ) : (
         <UserDashboard user={user} />
-      )} */}
+      )}
     </div>
   );
 }

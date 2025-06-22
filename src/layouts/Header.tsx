@@ -30,9 +30,9 @@ const ChevronDownIcon: React.FC<IconProps> = (props) => (
 const uniqueCategories = [...new Set(data.products.map((p) => p.category))];
 const navLinks = [
   { href: "/", label: "Anasayfa" },
-  { href: "/#allproducts", label: "Tüm Ürünler" },
+  { href: "#allproducts", label: "Tüm Ürünler" },
   { href: "/category", label: "Kategoriler", isDropdown: true },
-  { href: "/hakkimizda", label: "Hakkımızda" },
+  { href: "/about", label: "Hakkımızda" },
 ];
 
 //Tip esnekliği için any 
