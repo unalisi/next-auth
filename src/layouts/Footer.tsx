@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
-import data from "@/data/products.json"; 
-import { slugify } from "@/lib/utils"; 
+import data from "@/data/products.json";
+import { slugify } from "@/lib/utils";
 
 const GithubIcon = (props: React.SVGProps<SVGSVGElement>) => (
   <svg

@@ -34,7 +34,7 @@ interface User {
 }
 
 interface DashboardProps {
-  user: User; 
+  user: User;
 }
 
 export default function UserDashboard({ user }: DashboardProps) {
@@ -101,7 +101,9 @@ export default function UserDashboard({ user }: DashboardProps) {
                       />
                     </div>
                     <div>
-                      <p className="font-semibold text-gray-800">{item.title}</p>
+                      <p className="font-semibold text-gray-800">
+                        {item.title}
+                      </p>
                       <p className="text-sm text-gray-500">
                         {item.quantity} adet
                       </p>
