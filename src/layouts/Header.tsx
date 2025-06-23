@@ -159,7 +159,7 @@ const Header: React.FC<HeaderProps> = ({ user }) => {
             </div>
 
             <div className="flex items-center lg:hidden">
-              <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className="p-2 text-gray-700">{isMobileMenuOpen ? "Kapat" : "Menü"}</button>
+              <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className="p-2 text-4xl text-gray-700">{isMobileMenuOpen ? "x" : "☰"}</button>
             </div>
           </div>
         </div>
@@ -168,10 +168,43 @@ const Header: React.FC<HeaderProps> = ({ user }) => {
           {isMobileMenuOpen && (
             <motion.div initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: "auto" }} exit={{ opacity: 0, height: 0 }} className="lg:hidden">
               <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 border-t">
-                {navLinks.map((link) => (
-                  <Link key={link.label} href={link.href} onClick={closeAllMenus} className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-blue-600">{link.label}</Link>
-                ))}
-                <div className="border-t pt-4 mt-4 space-y-1">
+                {navLinks.map((link) => {
+                  if (link.isDropdown) {
+                    // Eğer link "Kategoriler" ise, onun yerine doğrudan kategori listesini render et.
+                    return (
+                      <React.Fragment key={link.label}>
+                        <div className="border-t my-2"></div>
+                        <h3 className="px-3 py-2 text-sm font-semibold text-gray-500 uppercase tracking-wider">
+                          Kategoriler
+                        </h3>
+                        {uniqueCategories.map((category) => (
+                          <Link
+                            key={category}
+                            href={`/category/${slugify(category)}`}
+                            onClick={closeAllMenus}
+                            className="block pl-6 pr-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-blue-600"
+                          >
+                            {category}
+                          </Link>
+                        ))}
+                        <div className="border-t my-2"></div>
+                      </React.Fragment>
+                    );
+                  }
+                  // Normal linkleri olduğu gibi render et.
+                  return (
+                    <Link
+                      key={link.label}
+                      href={link.href}
+                      onClick={closeAllMenus}
+                      className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-blue-600"
+                    >
+                      {link.label}
+                    </Link>
+                  );
+                })}
+
+                <div className="pt-2 space-y-1"> 
                   <div onClick={user ? undefined : () => { setIsLoginModalOpen(true); closeAllMenus(); }} className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-blue-600">
                     <Link href={user ? "/cart" : "#"}>Sepetim</Link>
                   </div>
