@@ -25,8 +25,9 @@ const getProductsByCategory = (
   return { products: filteredProducts, categoryName };
 };
 
-export default function CategoryPage({ params }: { params: { slug: string } }) {
-  const { products, categoryName } = getProductsByCategory(params.slug);
+export default async function CategoryPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const { products, categoryName } = getProductsByCategory(slug);
 
   // Eğer kategoriye ait ürün yoksa veya kategori mevcut değilse 404 dön
   if (!categoryName || products.length === 0) {

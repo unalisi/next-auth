@@ -13,9 +13,9 @@ const getProductBySlug = (slug: string): Product | undefined => {
   return data.products.find((p) => p.id === productId);
 };
 
-
-export default function ProductDetailPage({ params }: { params: { slug: string } }) {
-  const product = getProductBySlug(params.slug);
+export default async function ProductDetailPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const product = getProductBySlug(slug);
 
   // Ürün bulunamazsa 404 dön
   if (!product) {

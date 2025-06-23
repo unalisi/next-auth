@@ -35,9 +35,19 @@ const navLinks = [
   { href: "/about", label: "Hakkımızda" },
 ];
 
-//Tip esnekliği için any 
+interface User {
+  id?: string;
+  name?: string | null;
+  email?: string | null;
+  image?: string | null;
+  picture?: string;
+  sub?: string;
+  email_verified?: boolean;
+  role?: string;
+}
+
 interface HeaderProps {
-  user: any | null; 
+  user: User | null; 
 }
 
 const Header: React.FC<HeaderProps> = ({ user }) => {

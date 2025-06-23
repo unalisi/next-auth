@@ -22,8 +22,19 @@ const UserIcon = (props: React.SVGProps<SVGSVGElement>) => (
   </svg>
 );
 
+interface User {
+  id?: string;
+  name?: string | null;
+  email?: string | null;
+  image?: string | null;
+  picture?: string;
+  sub?: string;
+  email_verified?: boolean;
+  role?: string;
+}
+
 interface DashboardProps {
-  user: any; 
+  user: User; 
 }
 
 export default function UserDashboard({ user }: DashboardProps) {
