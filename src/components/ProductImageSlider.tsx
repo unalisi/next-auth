@@ -1,11 +1,11 @@
 "use client";
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination } from 'swiper/modules';
-import Image from 'next/image';
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper/modules";
+import Image from "next/image";
 
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 interface Props {
   images: string[];
@@ -27,7 +27,7 @@ const ProductImageSlider: React.FC<Props> = ({ images }) => {
               src={src}
               alt={`Ürün görseli ${index + 1}`}
               fill
-              style={{ objectFit: 'cover' }}
+              style={{ objectFit: "cover" }}
               className="rounded-lg"
               sizes="(max-width: 1024px) 100vw, 50vw"
             />

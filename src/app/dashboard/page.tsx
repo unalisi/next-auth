@@ -1,12 +1,11 @@
-import { auth0 } from "@/lib/auth0"; 
-import { isUserAdmin } from "@/src/actions/isUserAdmin"; 
+import { auth0 } from "@/lib/auth0";
+import { isUserAdmin } from "@/src/actions/isUserAdmin";
 
 import { redirect } from "next/navigation";
 import UserDashboard from "../../components/dashboards/UserDashboard";
 import AdminDashboard from "../../components/dashboards/AdminDashboard";
 
 export default async function DashboardPage() {
-  
   // Oturumu, kendi auth0 istemcimiz üzerinden alıyoruz.
   const session = await auth0.getSession();
 
@@ -15,7 +14,7 @@ export default async function DashboardPage() {
   }
 
   const user = session.user;
-  
+
   // Rol kontrolü
   const isAdmin = await isUserAdmin();
 
@@ -30,11 +29,7 @@ export default async function DashboardPage() {
         </p>
       </div>
 
-      {isAdmin ? (
-        <AdminDashboard user={user} />
-      ) : (
-        <UserDashboard user={user} />
-      )}
+      {isAdmin ? <AdminDashboard user={user} /> : <UserDashboard user={user} />}
     </div>
   );
 }
